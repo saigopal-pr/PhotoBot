@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#35C3BB"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="116dp"
+        android:layout_height="79dp"
+        android:background="@android:drawable/ic_menu_camera"
+        android:text="Camera"
+        android:textColor="@color/cardview_dark_background"
+        android:textColorHighlight="#228B22"
+        android:textColorLink="#228B22"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="147dp"
+        tools:layout_editor_absoluteY="286dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="227dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="126dp"
+        android:text="Have a question?"
+        android:textColor="#088F8F"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.086"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="108dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="169dp"
+        android:layout_marginBottom="532dp"
+        android:text="Click a pic!"
+        android:textColor="#088F8F"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.052"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="127dp"
+        android:layout_height="121dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/black_and_blue_music_app_logo__1_"
+        tools:layout_editor_absoluteX="296dp" />
+
+    <ImageButton
+        android:id="@+id/image"
+        android:layout_width="377dp"
+        android:layout_height="314dp"
+        android:background="@android:drawable/ic_menu_gallery"
+        android:backgroundTint="#003A3434"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.625"
+        app:srcCompat="@drawable/topbackground" />
+
+    <ImageButton
+        android:id="@+id/imageButton5"
+        android:layout_width="213dp"
+        android:layout_height="195dp"
+        android:background="#00FBFBFB"
+        app:srcCompat="@drawable/white_and_black_elegant_system_logo"
+        tools:layout_editor_absoluteX="218dp"
+        tools:layout_editor_absoluteY="146dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton14"
+        android:layout_width="281dp"
+        android:layout_height="309dp"
+        android:backgroundTint="#00FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageView4"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image"
+        app:layout_constraintVertical_bias="0.228"
+        app:srcCompat="@drawable/white_and_black_elegant_system_logo__6_" />
+
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="286dp"
+        android:layout_height="198dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.592"
+        app:srcCompat="@android:drawable/ic_menu_gallery" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="164dp"
+        android:layout_height="140dp"
+        app:srcCompat="@drawable/app_logo"
+        tools:layout_editor_absoluteX="281dp"
+        tools:layout_editor_absoluteY="-18dp" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="425dp"
+        android:layout_height="238dp"
+        app:srcCompat="@drawable/black_and_blue_music_app_logo__4_"
+        tools:layout_editor_absoluteX="-114dp"
+        tools:layout_editor_absoluteY="-59dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
