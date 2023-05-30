@@ -8,7 +8,7 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/take_picture"
         android:layout_width="116dp"
         android:layout_height="79dp"
         android:background="@android:drawable/ic_menu_camera"
@@ -17,8 +17,12 @@
         android:textColorHighlight="#228B22"
         android:textColorLink="#228B22"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="147dp"
-        tools:layout_editor_absoluteY="286dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.308" />
 
     <TextView
         android:id="@+id/textView2"
@@ -40,8 +44,6 @@
         android:id="@+id/textView3"
         android:layout_width="108dp"
         android:layout_height="30dp"
-        android:layout_marginTop="169dp"
-        android:layout_marginBottom="532dp"
         android:text="Click a pic!"
         android:textColor="#088F8F"
         android:textSize="20sp"
@@ -51,17 +53,19 @@
         app:layout_constraintHorizontal_bias="0.052"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.201" />
 
     <ImageView
         android:id="@+id/imageView4"
         android:layout_width="127dp"
         android:layout_height="121dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/image"
         app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/black_and_blue_music_app_logo__1_"
-        tools:layout_editor_absoluteX="296dp" />
+        app:srcCompat="@drawable/black_and_blue_music_app_logo__1_" />
 
     <ImageButton
         android:id="@+id/image"
@@ -74,7 +78,7 @@
         app:layout_constraintHorizontal_bias="0.47"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.625"
+        app:layout_constraintVertical_bias="0.64"
         app:srcCompat="@drawable/topbackground" />
 
     <ImageButton
@@ -82,26 +86,30 @@
         android:layout_width="213dp"
         android:layout_height="195dp"
         android:background="#00FBFBFB"
-        app:srcCompat="@drawable/white_and_black_elegant_system_logo"
-        tools:layout_editor_absoluteX="218dp"
-        tools:layout_editor_absoluteY="146dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.235"
+        app:srcCompat="@drawable/white_and_black_elegant_system_logo" />
+
 
     <ImageButton
         android:id="@+id/imageButton14"
-        android:layout_width="281dp"
-        android:layout_height="309dp"
+        android:layout_width="242dp"
+        android:layout_height="207dp"
         android:backgroundTint="#00FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/imageView4"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/image"
-        app:layout_constraintVertical_bias="0.228"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/white_and_black_elegant_system_logo__6_" />
 
-
     <ImageView
-        android:id="@+id/imageView7"
+        android:id="@+id/display_picture"
         android:layout_width="286dp"
         android:layout_height="198dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -117,16 +125,25 @@
         android:id="@+id/imageView5"
         android:layout_width="164dp"
         android:layout_height="140dp"
-        app:srcCompat="@drawable/app_logo"
-        tools:layout_editor_absoluteX="281dp"
-        tools:layout_editor_absoluteY="-18dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/app_logo" />
 
     <ImageView
-        android:id="@+id/imageView9"
-        android:layout_width="425dp"
-        android:layout_height="238dp"
-        app:srcCompat="@drawable/black_and_blue_music_app_logo__4_"
-        tools:layout_editor_absoluteX="-114dp"
-        tools:layout_editor_absoluteY="-59dp" />
+        android:id="@+id/imageView3"
+        android:layout_width="194dp"
+        android:layout_height="141dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/black_and_blue_music_app_logo__4_" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
