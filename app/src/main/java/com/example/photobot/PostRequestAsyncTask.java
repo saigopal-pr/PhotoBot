@@ -1,6 +1,12 @@
 package com.example.photobot;
+import android.app.Activity;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.util.Log;
+import android.widget.TextView;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
@@ -9,9 +15,12 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
 
-public class PostRequestAsyncTask extends AsyncTask<String, Void, String> {
+public class PostRequestAsyncTask extends AsyncTask<String, Void, String>{
+    private Activity context;
     private static final String API_URL = "https://photobotapp.wn.r.appspot.com/parse";
-
+    public PostRequestAsyncTask(Activity context){
+        this.context = context;
+    }
     @Override
     protected String doInBackground(String... params) {
         String img = params[0];
@@ -32,16 +41,14 @@ public class PostRequestAsyncTask extends AsyncTask<String, Void, String> {
 
             // Set the request headers (optional)
             connection.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
-
+            Log.d("hi",img.substring(0,50));
             // Create the image parameter
             String postData = "image=" + URLEncoder.encode(img, "UTF-8");
-
             // Write the POST data to the request body
             DataOutputStream outputStream = new DataOutputStream(connection.getOutputStream());
             outputStream.writeBytes(postData);
             outputStream.flush();
             outputStream.close();
-
             // Get the response status code
             int responseCode = connection.getResponseCode();
 
@@ -53,7 +60,6 @@ public class PostRequestAsyncTask extends AsyncTask<String, Void, String> {
                 response.append(line);
             }
             reader.close();
-
             // Close the connection
             connection.disconnect();
 
@@ -71,10 +77,17 @@ public class PostRequestAsyncTask extends AsyncTask<String, Void, String> {
     protected void onPostExecute(String response) {
         Log.d("hi",response);
         if (response != null) {
-            // Do something with the response
-            // For example, update UI elements or pass the response to another method
+            try {
+                JSONObject json = new JSONObject(response);
+                Intent intent = new Intent(context, output_screen.class);
+                intent.putExtra("question",json.getString("question"));
+                intent.putExtra("answer",json.getString("response"));
+                context.startActivity(intent);
+            } catch (JSONException e) {
+                Log.d("hi",e.toString());
+                throw new RuntimeException(e);
+            }
         } else {
-            // Handle the case where the response is null or there was an error
         }
     }
 }
