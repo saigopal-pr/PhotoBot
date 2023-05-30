@@ -18,6 +18,8 @@ import java.io.ByteArrayOutputStream;
 
 public class MainActivity extends AppCompatActivity {
     private Button picture;
+
+    private Button confirm;
     private ImageView display_picture;
     private static final int REQUEST_CODE_TAKE_PICTURE = 0;
     @Override
@@ -31,6 +33,13 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 takePicture(view);
                 Log.d("hi","onclick after takepicture");
+            }
+        });
+        confirm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, output_screen.class);
+                startActivity(intent);
             }
         });
     }
