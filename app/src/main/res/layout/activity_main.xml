@@ -12,38 +12,42 @@
         android:layout_width="116dp"
         android:layout_height="79dp"
         android:background="@android:drawable/ic_menu_camera"
+        android:backgroundTint="#000000"
+        android:backgroundTintMode="add"
         android:text="Camera"
-        android:textColor="@color/cardview_dark_background"
-        android:textColorHighlight="#228B22"
-        android:textColorLink="#228B22"
+        android:textColorHighlight="@color/black"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.314" />
+        app:layout_constraintVertical_bias="0.349" />
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="227dp"
-        android:layout_height="38dp"
+        android:layout_width="170dp"
+        android:layout_height="31dp"
         android:layout_marginTop="126dp"
+        android:background="@android:drawable/bottom_bar"
+        android:backgroundTint="@color/design_default_color_secondary"
         android:text="Have a question?"
         android:textColor="#088F8F"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.081"
+        app:layout_constraintHorizontal_bias="0.062"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.052" />
+        app:layout_constraintVertical_bias="0.048" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="108dp"
         android:layout_height="30dp"
+        android:background="@android:drawable/bottom_bar"
+        android:backgroundTint="@color/design_default_color_secondary"
         android:text="Click a pic!"
         android:textColor="#088F8F"
         android:textSize="20sp"
@@ -54,6 +58,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.232" />
+
 
     <ImageView
         android:id="@+id/imageView4"
@@ -67,7 +72,6 @@
         app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/black_and_blue_music_app_logo__1_" />
 
-
     <ImageButton
         android:id="@+id/image"
         android:layout_width="377dp"
@@ -79,34 +83,21 @@
         app:layout_constraintHorizontal_bias="0.441"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.64"
+        app:layout_constraintVertical_bias="0.63"
         app:srcCompat="@drawable/topbackground" />
 
     <ImageButton
         android:id="@+id/imageButton5"
-        android:layout_width="213dp"
-        android:layout_height="195dp"
+        android:layout_width="196dp"
+        android:layout_height="200dp"
         android:background="#00FBFBFB"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.261"
+        app:layout_constraintVertical_bias="0.231"
         app:srcCompat="@drawable/white_and_black_elegant_system_logo" />
-
-    <ImageButton
-        android:id="@+id/imageButton14"
-        android:layout_width="236dp"
-        android:layout_height="202dp"
-        android:backgroundTint="#00FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.029"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/white_and_black_elegant_system_logo__6_" />
 
     <ImageView
         android:id="@+id/display_picture"
@@ -133,28 +124,39 @@
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/app_logo" />
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="243dp"
-        android:layout_height="205dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/black_and_blue_music_app_logo__5_" />
-
     <Button
         android:id="@+id/confirm"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="105dp"
+        android:layout_height="56dp"
         android:text="Confirm"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.717" />
+        app:layout_constraintVertical_bias="0.743" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="200dp"
+        android:layout_height="168dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/imageView5"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/black_and_blue_music_app_logo__6_" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="441dp"
+        android:layout_height="341dp"
+        android:layout_marginTop="576dp"
+        app:layout_constraintEnd_toStartOf="@+id/imageView4"
+        app:layout_constraintHorizontal_bias="0.729"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/black_and_blue_music_app_logo__7_" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
