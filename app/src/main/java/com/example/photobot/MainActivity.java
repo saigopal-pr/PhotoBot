@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.Color;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.os.Handler;
@@ -35,13 +36,7 @@ public class MainActivity extends AppCompatActivity {
         display_picture = (ImageView)findViewById(R.id.display_picture);
         loading = findViewById(R.id.progressBar);
         confirm = (Button)findViewById(R.id.confirm);
-        confirm.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                loading.setVisibility(View.VISIBLE);
-                confirm.setEnabled(false);
-            }
-        });
+        loading.setVisibility(View.INVISIBLE);
         picture.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -49,8 +44,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         confirm.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("ResourceAsColor")
             @Override
             public void onClick(View view) {
+                loading.setVisibility(View.VISIBLE);
+                confirm.setEnabled(false);
+                confirm.setText("Processing");
+                confirm.setTextColor(R.color.black);
+                confirm.setBackgroundColor(Color.parseColor("#94FFEC"));
                 Bitmap image = ((BitmapDrawable)display_picture.getDrawable()).getBitmap();
                 String img = convertImgToStr(image);
                 getAnswer(img);            }
