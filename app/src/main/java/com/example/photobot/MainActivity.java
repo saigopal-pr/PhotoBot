@@ -7,12 +7,14 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
+import android.os.Handler;
 import android.provider.MediaStore;
 import android.util.Base64;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import java.io.ByteArrayOutputStream;
@@ -22,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
     private Button confirm;
     private ImageView display_picture;
-
+    private ProgressBar loading;
 
     private static final int REQUEST_CODE_TAKE_PICTURE = 0;
     @Override
@@ -31,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         picture = (Button)findViewById(R.id.take_picture);
         display_picture = (ImageView)findViewById(R.id.display_picture);
+        loading = findViewById(R.id.progressBar);
         confirm = (Button)findViewById(R.id.confirm);
         picture.setOnClickListener(new View.OnClickListener() {
             @Override
