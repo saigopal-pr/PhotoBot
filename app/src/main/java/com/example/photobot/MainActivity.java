@@ -35,6 +35,13 @@ public class MainActivity extends AppCompatActivity {
         display_picture = (ImageView)findViewById(R.id.display_picture);
         loading = findViewById(R.id.progressBar);
         confirm = (Button)findViewById(R.id.confirm);
+        confirm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                loading.setVisibility(View.VISIBLE);
+                confirm.setEnabled(false);
+            }
+        });
         picture.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
